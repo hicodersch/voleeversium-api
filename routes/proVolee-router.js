@@ -19,5 +19,7 @@ router.delete('/:id', asyncHandler(async (req, res, next) =>
 res.status(200).json(await proVoleeService.deleteProVolee(req.params.id))));
 
 
+
+
 export default router;
 

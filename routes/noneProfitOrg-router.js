@@ -18,6 +18,9 @@ res.status(200).send(await noneProfitOrgService.updateNoneProfitOrg(req.params.i
 router.delete('/:id', asyncHandler(async (req, res, next) => 
 res.status(200).json(await noneProfitOrgService.deleteNoneProfitOrg(req.params.id))));
 
+router.post('/check', asyncHandler(async (req, res, next) => 
+res.status(200).send(await noneProfitOrgService.checkNoneProfitOrg(req.body))));
+
 
 export default router;
 

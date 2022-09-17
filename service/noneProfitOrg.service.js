@@ -24,7 +24,28 @@ export async function updateNoneProfitOrg(pId, pUpdatedEntity){
   });
 }
 
-
+//TODO it will be reviewed
+export async function checkNoneProfitOrg(pUser) {
+  const currentVolee = await db.noneProfitOrg.findOne({
+    where: { email: pUser.email },
+  });
+  if (currentVolee.email) {
+    if (currentVolee.password == pUser.password) {
+      return {
+        allowLogin: true,
+      };
+    } else {
+      return {
+        allowLogin: false,
+      };
+    }
+    {
+    }
+  }
+  return {
+    allowLogin: "don't exsist",
+  };
+}
 
 
 
