@@ -19,6 +19,10 @@ export default (sequelize, Sequelize) => {
         allowNull: false,
         unique: true
       },
+      password: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       picture:{
         type: Sequelize.STRING
       },
