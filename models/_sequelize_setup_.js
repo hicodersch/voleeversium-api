@@ -4,6 +4,7 @@ import Sequelize from "sequelize";
 import VoleeModel from "./volee.js";
 import NoneProfitOrg from "./noneProfitOrg.js";
 import ProVolee from "./proVolee.js";
+// import Matching from './match.js'
 
 const sequelize = new Sequelize("voleeversium", "root", "Sakmak4326", {
   host: "localhost",
@@ -22,6 +23,10 @@ db.proVolee = ProVolee(sequelize, Sequelize);
 
 db.noneProfitOrg.hasMany(db.proVolee);
 db.proVolee.belongsTo(db.noneProfitOrg);
+
+// db.volee.belongsToMany(db.proVolee, { through: "Matching" })
+// db.proVolee.belongsToMany(db.volee, { through: "Matching" })
+
 
 
 // use it to force to create the db from scratch
