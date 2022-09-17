@@ -26,9 +26,5 @@ export default (sequelize, Sequelize) => {
       picture:{
         type: Sequelize.STRING
       },
-      skills: {
-        type: Sequelize.JSON,
-        required: true,
-      },
     });
   };

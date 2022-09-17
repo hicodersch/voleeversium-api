@@ -21,3 +21,25 @@ export async function deleteVolee(pId) {
     where: { id: pId },
   });
 }
+//TODO it will be reviewed
+export async function checkVolee(pUser) {
+  const currentVolee = await db.volee.findOne({
+    where: { email: pUser.email },
+  });
+  if (currentVolee.email) {
+    if (currentVolee.password == pUser.password) {
+      return {
+        allowLogin: true,
+      };
+    } else {
+      return {
+        allowLogin: false,
+      };
+    }
+    {
+    }
+  }
+  return {
+    allowLogin: "don't exsist",
+  };
+}
