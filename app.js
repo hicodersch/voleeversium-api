@@ -6,9 +6,10 @@ import logger from "morgan";
 import cors from "cors";
 
  //Routers
- import voleRouter from "./routes/volee-router.js";
-// import incomeRouter from "./routes/income-router.js";
-// import expensesRouter from "./routes/expenses-router.js";
+ import voleeRouter from "./routes/volee-router.js";
+ import proVoleeRouter from './routes/proVolee-router.js'
+ import noneProfitOrgRouter from './routes/noneProfitOrg-router.js'
+
 
 let app = express();
 
@@ -19,9 +20,9 @@ app.use(cookieParser());
 app.use(cors());
 
 // Routers
-app.use("/volee", voleRouter);
-// app.use("/income", incomeRouter);
-// app.use("/expenses", expensesRouter);
+app.use("/volee", voleeRouter);
+app.use("/proVolee", proVoleeRouter);
+app.use("/noneProfitOrg", noneProfitOrgRouter);
 
 app.listen(3001, () => {
   console.log("listening on 3001");

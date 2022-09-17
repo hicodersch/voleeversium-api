@@ -1,14 +1,11 @@
 export default (sequelize, Sequelize) => {
-    return sequelize.define("volee", {
+    return sequelize.define("noneProfitOrg", {
       id: {
           type: Sequelize.INTEGER,
           primaryKey: true,
           autoIncrement: true
       },
-      firstName: {
-        type: Sequelize.STRING
-      },
-      lastName: {
+      name: {
         type: Sequelize.STRING
       },
       status: {
@@ -18,13 +15,6 @@ export default (sequelize, Sequelize) => {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true
-      },
-      picture:{
-        type: Sequelize.STRING
-      },
-      skills: {
-        type: Sequelize.JSON,
-        required: true,
-      },
+      }
     });
   };
