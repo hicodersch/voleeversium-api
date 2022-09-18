@@ -11,12 +11,12 @@ Voleeversium typically forms a pool especially for Volee and VNPO to link up wit
 Volee and VNPO input skills and requirements and then match with each other if fit both.
 
 ## How we built
-We used following technologies to achieve the goal:
-Figma for designing
-React.js for front--end,
-Node.js for back-end
-Mysql for database
-Sqlz for ORM
+We used following technologies:
+- Figma for designing
+- React.js for front--end,
+- Node.js for back-end
+- Mysql for database
+- Sql with ORM
 
 ## Challenges we ran into
 We had a long discussion how to create a login module which, effected negatively the schedule in the limited time span. Designing the UI was another challenge that we had to went through several times to decide on the features to best suit the users` needs.
